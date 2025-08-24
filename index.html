@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH-Tube</title>
+    <!-- daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/aee48a0862.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- css files -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <nav class="w-11/12 py-3 mx-auto">
+      <div
+        class="navTop flex justify-between items-center border-b-2 pt-3 pb-5"
+      >
+        <div class="logo w-[150px]">
+          <img src="./assets/images/Logo.png" alt="Logo" />
+        </div>
+        <div class="search">
+          <label class="input input-bordered flex items-center gap-2">
+            <input
+              id="searchField"
+              type="text"
+              class="grow"
+              placeholder="Search"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="h-4 w-4 opacity-70"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </label>
+        </div>
+        <div class="sort">
+          <but  id="sortBtn" class="btn">Sort</but>
+        </div>
+      </div>
+      <div id="navBottom" class="flex justify-center items-center py-5 gap-5">
+        <button
+          onclick="loadVideos(), setBtn()"
+          class="btn active categoryBtns"
+          id="allId"
+        >
+          All
+        </button>
+      </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <!-- main starts -->
+    <main>
+      <section
+        id="videosContainer"
+        class="cards w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10"
+      >
+        <!-- <div class="card flex items-center justify-center gap-5">
+          <div class="cardImg">
+            <img class="" src="./assets/images/Icon.png" alt="" />
+          </div>
+          <div class="cardContent">
+            <div class="titleImg">
+              <img src="" alt="" />
+              <h1>title</h1>
+            </div>
+            <div class="nameVerify">
+              <p class="name">Name</p>
+              <span>icon</span>
+            </div>
+            <p class="views">9k</p>
+          </div>
+        </div> -->
+      </section>
+    </main>
+    <!-- main ends -->
+
+    <!-- Modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="detailsModal.showModal()">open modal</button> -->
+    <dialog id="detailsModal" class="modal modal-middle">
+      <div class="modal-box">
+        <div id="modalContent">
+
+        </div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- js file -->
+    <script src="./assets/js/video.js"></script>
+  </body>
+</html>
